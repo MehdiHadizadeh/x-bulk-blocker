@@ -1,0 +1,15 @@
+# x-bulk-blocker — example username list
+# One username per line
+# You can use with or without @ → both work
+# Empty lines and lines starting with # are ignored
+
+spam_bot_2025
+crypto_scammer123
+@fake_elon_musk
+troll_account_abc
+harassment_user_xyz
+another_spammer
+free_followers_bot
+nft_pump_group
+
+# Remove the example accounts above and paste your own list here
