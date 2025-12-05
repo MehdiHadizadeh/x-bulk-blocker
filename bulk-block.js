@@ -57,8 +57,12 @@ async function blockUser(username) {
     menuBtn.click();
     await new Promise(r => setTimeout(r, CLICK_WAIT));
     
-    const blockBtn = Array.from(document.querySelectorAll('[role="menuitem"] span'))
-      .find(span => span.textContent.includes('Block') && span.textContent.includes('@' + username))?.closest('[role="menuitem"]');
+    const blockBtn = Array.from(document.querySelectorAll('[role="menuitem"]'))
+      .find(item => {
+        const text = item.textContent.trim();
+        return text.includes('Block') && !text.includes('Unblock');
+      });
+
     if (!blockBtn) throw new Error('Block button not found');
     
     blockBtn.click();
